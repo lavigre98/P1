@@ -1,10 +1,552 @@
-h1 {
-  color: hotpink;
-  font-family: cursive;
+/* =========================================================
+   1) VARIABLES GLOBALS
+========================================================= */
+
+/* Declaració de variables globals del projecte */
+:root {
+  --font-sans-serif: "Inter", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --main-color: #000000;
+  --light-color: #ffffff;
+  --bg-light: #e7e0e0;
+  --contrast-color: #e67e22;
 }
 
+
+/* =========================================================
+   2) RESET I BASE GENERAL
+========================================================= */
+
+/* Reset bàsic per evitar marges i paddings per defecte */
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Desplaçament suau quan uses enllaços interns (#id) */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Necessari per al sticky footer */
+html,
 body {
-  height: 100vh;
-  color: #1f1f1f;
-  background: linear-gradient(to bottom, #bada55, #c0ffee);
+  height: 100%;
+}
+
+/* Estils generals del document */
+body {
+  margin: 0;
+  font-family: var(--font-sans-serif);
+  color: #333;
+  background: #f4f4f4;
+  line-height: 1.6;
+
+  /* Sticky footer */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estructura principal del contingut */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+
+  /* Sticky footer */
+  flex: 1 0 auto;
+}
+
+/* El footer no s’encongeix */
+footer {
+  flex-shrink: 0;
+}
+
+/* Encapçalaments principals centrats per defecte */
+h1,
+h2 {
+  text-align: center;
+}
+
+
+/* =========================================================
+   3) ACCESSIBILITAT
+========================================================= */
+
+/* Element ocult visualment però llegible per lectors de pantalla */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   4) ENLLAÇOS I BOTONS
+========================================================= */
+
+/* Enllaços generals */
+a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 1px solid;
+}
+
+/* Base comuna dels botons i enllaços amb classe .btn */
+a.btn,
+button {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: .5rem 1rem;
+  font-size: .75rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* Botó clar */
+a.btn.btn-light,
+button.btn.btn-light {
+  color: var(--main-color);
+  background-color: var(--light-color);
+}
+
+/* Botó fosc */
+a.btn.btn-dark {
+  color: var(--light-color);
+  background-color: var(--main-color);
+}
+
+/* Botó transparent amb vora */
+a.btn.btn-transparent {
+  padding: .25rem;
+  color: var(--main-color);
+  background-color: transparent;
+  border: 1px solid var(--main-color);
+}
+
+/* Hover general dels botons */
+a.btn:hover,
+button.btn:hover {
+  background-color: var(--contrast-color);
+}
+
+/* Hover específic del botó transparent */
+a.btn.btn-transparent:hover {
+  border: 1px solid transparent;
+}
+
+
+/* =========================================================
+   5) CAPÇALERA / HEADER
+========================================================= */
+
+/* Contenidor principal de la capçalera */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 15px;
+}
+
+/* Llista de navegació principal */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+/* Aquest gap està repetit en el teu CSS original; el deixe tal qual */
+.main-nav ul {
+  gap: 30px;
+}
+
+/* Enllaços del menú */
+.main-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+/* Efecte hover dels enllaços del menú */
+.main-nav a:hover {
+  color: #e67e22;
+}
+
+
+/* =========================================================
+   6) PORTADA / ÍNDEX
+========================================================= */
+
+/* Secció hero de benvinguda */
+.caixaBenvinguda {
+  width: 100%;
+  background-image: url(assets/img/presentacioDos.jpg);
+  background-size: cover;
+}
+
+/* Text dins de la capçalera visual */
+.caixaBenvinguda .text {
+  height: 100%;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Títol principal de portada */
+#titolPrincipal {
+  font-family: var(--font-serif);
+}
+
+/* Elements específics del bloc inicial de portada */
+.contenedorIndex img {
+  width: 100%;
+  height: auto;
+}
+
+.contenedorIndex h1 {
+  font-size: 50px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.contenedorIndex a {
+ margin-top: 20px;
+}
+
+.contenedorIndex div{
+  padding: 20px;
+}
+
+.contenedorIndex {
+  background-color: var(--light-color);
+}
+
+.recomanacions h1 {
+margin-top: 50px;
+font-family: 'Homemade Apple', cursive;
+margin-bottom: 20px;
+border-bottom: 1px solid var(--main-color);
+padding-bottom: 30px;
+
+}
+
+.contingutReceptesDestacades{
+  background-color: #ffffff;
+}
+
+
+/* =========================================================
+   7) NAVEGACIÓ PER CATEGORIES
+========================================================= */
+
+/* Llista lateral de categories */
+nav.nav-categories ul {
+  margin-left: 0;
+  margin-bottom: 2rem;
+  padding-left: 0;
+  color: var(--main-color);
+  font-weight: 700;
+  list-style-type: none;
+}
+
+nav.nav-categories li {
+  margin-bottom: 0;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--main-color);
+}
+
+nav.nav-categories a {
+  color: var(--main-color);
+  border-bottom: none;
+}
+
+nav.nav-categories a:hover {
+  color: var(--contrast-color);
+}
+
+/* Input del cercador lateral */
+.nav-categories input.search {
+  display: block;
+  width: 100%;
+  padding: .5rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  border: 1px solid var(--main-color);
+  background-image: url(assets/img//icon-search.svg);
+  background-repeat: no-repeat;
+  background-size: 24px;
+  background-position: center right;
+}
+
+.nav-categories input.search:focus {
+  outline: none;
+}
+
+
+/* =========================================================
+   8) GRIDS I MAQUETACIÓ
+========================================================= */
+
+/* Articles dins de la graella de receptes */
+.gridMenjars > article {
+  color: var(--main-color);
+  background-color: var(--light-color);
+}
+
+.gridMenjars > article {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+
+@media (width >= 992px) {
+  /* Grid de receptes destacades de la portada */
+  .gridMenjarsDestacats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+  }
+
+  /* Bloc introductori de la portada */
+  .contenedorIndex {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+
+  /* Estructura general de la pàgina de categories */
+  .blogEmbolcall {
+    display: grid;
+    grid-template-columns: 250px auto;
+    column-gap: 4rem;
+  }
+
+  /* Grid de receptes dins de cada categoria */
+  .gridMenjars {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+}
+
+
+/* =========================================================
+   9) IMATGES I MULTIMÈDIA
+========================================================= */
+
+/* Figures de les targetes de recepta */
+.gridMenjars > article > figure,
+.contingutReceptesDestacades > figure {
+  margin: 0;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: var(--light-color);
+}
+
+/* Imatge dins de la figura: ompli el contenidor i es retalla sense deformar */
+.gridMenjars > article > figure img,
+.contingutReceptesDestacades > figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* Vídeos incrustats */
+iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+
+/* =========================================================
+   10) ELEMENTS GENERALS DE RECEPTES
+========================================================= */
+
+.receptesData {
+  padding: 1rem;
+}
+
+#titolCategoria {
+  font-family: 'Homemade Apple', cursive;
+  text-align: left;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.llistaCategories h2 {
+  font-family: 'Homemade Apple', cursive;
+  text-align: left;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   11) PÀGINA FITXA / DETALL DE RECEPTA
+========================================================= */
+
+/* Etiqueta de categoria (Dinar, Desdejuni...) */
+div.file {
+  display: inline-block;
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+  padding: 0.25rem 1rem;
+  text-transform: uppercase;
+  background-color: var(--contrast-color);
+  font-weight: 700;
+  color: var(--light-color);
+  font-family: var(--font-sans-serif);
+}
+
+/* Títol principal de la fitxa */
+h1.file {
+  text-align: left;
+}
+
+/* Bloc introductori amb imatge + frase */
+.intro-file {
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+}
+
+.intro-file p {
+  margin-top: 30px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 30px;
+  font-family: 'Homemade Apple', cursive;
+  text-align: center;
+}
+
+.intro-file img {
+  width: 100%;
+  height: auto;
+}
+
+/* Llista d’ingredients */
+.ingredients {
+  list-style: none;
+  padding-top: 30px;
+}
+
+.ingredients li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.ingredients li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--contrast-color);
+}
+
+/* Passos de l’elaboració */
+.steps {
+  list-style: none;
+  counter-reset: step;
+  padding-left: 0;
+}
+
+.steps li {
+  counter-increment: step;
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.steps li::before {
+  content: counter(step) ".";
+  position: absolute;
+  left: 0;
+  color: var(--contrast-color);
+  font-weight: bold;
+}
+
+/* Imatges laterals dels passos */
+.elaboracio figure {
+  margin-bottom: 30px;
+  text-align: right;
+}
+
+.elaboracio figure img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@media (width >= 992px) {
+  .intro-file {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .intro-file p {
+    font-size: 3rem;
+    line-height: 100px;
+    margin-left: 30px;
+  }
+
+  .elaboracio {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+  }
+}
+
+
+/* =========================================================
+   12) FOOTER
+========================================================= */
+
+footer {
+  padding: 3rem;
+  color: var(--light-color);
+  background-color: var(--main-color);
+  font-size: .9rem;
+  text-align: center;
+}
+
+/* =========================================================
+   13) ATRIBUCIONS
+========================================================= */
+
+.atribucions h1 {
+    font-family: 'Homemade Apple', cursive;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.atribucions section {
+  margin-top: 30px;
 }

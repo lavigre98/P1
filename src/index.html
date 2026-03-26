@@ -1,15 +1,91 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8"/>
-    <title>My First Parcel App</title>
-
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="app.js"></script>
-
-  </head>
+<!DOCTYPE html>
+<!-- Accessibilitat: Idioma configurat en català segons els requisits -->
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Títol -->
+    <title>Blog de Receptes Quotidianes - Portada</title>
+    <!-- Referència al teu fitxer CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
+</head>
 <body>
-  <include src="header.html"></include>
-  <h1>Hello, World!</h1>
+
+    <!-- Inclusió de la capçalera mitjançant PostHTML-include -->
+    <include src="src/header.html"></include>
+
+        <section class="caixaBenvinguda">
+                <div>
+                    <div class="text">
+                        <h2 id = "titolPrincipal">Blog de Receptes</h2>
+                    </div> 
+                </div>
+        </section>
+
+    <main>
+        <section>
+            <div class="contenedorIndex">
+                <figure>
+                    <img src="assets/img/imatgePresentacio.png" alt="Imatge Presentació">
+                </figure>
+                <div>
+                    <h1 id="titolQueCanviaDeColor">Hola!</h1>
+                    <p>Aquesta pàgina web serà el teu espai d’inspiració culinària per a aquells dies en què no saps què cuinar.</p>
+                    <p> Què t'apeteix menjar avui?</p>
+                    <a href="categoria.html"  class="btn btn-dark">Veure totes les receptes<span class="visually-hidden">Veure totes les receptes</span></a>
+                </div>
+            </div>
+        </section>
+        <section class="recomanacions">
+            <h1>Proposta de la setmana</h1>
+                <div class = "gridMenjarsDestacats">
+                    <article>
+                        <div class="file">Desdejuni</div>
+                        <div class="contingutReceptesDestacades">
+                            <figure>
+                                <img src="assets/img/creps.jpg" alt="Crepes">
+                            </figure>
+                            <div class="receptesData">
+                                <h3><cite>Crepes</cite></h3>
+                                <a href="det2.html" class="btn btn-dark">Anar a la recepta<span class="visually-hidden">Anar a la recepta</span></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="file">Dinar</div>
+                        <div class="contingutReceptesDestacades"> 
+                            <figure>
+                                    <img src="assets/img/cousCous.png" alt="Cous cous">
+                                </figure>
+                                <div class="receptesData">
+                                    <h3><cite>Cous cous</cite></h3>
+                                    <a href="det1.html" class="btn btn-dark">Anar a la recepta<span class="visually-hidden">Anar a la recepta</span></a>
+                                </div>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="file">Sopar</div>
+                        <div class="contingutReceptesDestacades"> 
+                            <figure>
+                                <img src="assets/img/ramen.jpg" alt="Ramen">
+                            </figure>
+                            <div class="receptesData">
+                                <h3><cite>Ramen</cite></h3>
+                                <a href="" class="btn btn-dark">Anar a la recepta<span class="visually-hidden">Anar a la recepta</span></a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+    </main>
+
+<footer>
+    <p>LARA VILA GREGORI - P1 - EINES HTML I CSS I - 2025 / 2026</p>
+</footer>
+
+    <!-- Referència al teu fitxer JavaScript -->
+<script type="module" src="app.js"></script>
 </body>
 </html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receptes Quotidianes - Llistat de Plats</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Activitat 5: Reutilitzem la capçalera -->
+    <include src="src/header.html"></include>
+
+     <main>
+        <h1 id="titolCategoria">Qué vols menjar hui?</h1>
+       <div>
+            <div class="blogEmbolcall">
+
+                <nav class="nav-categories">
+                    <ul>
+                        <li><a href="#desdejuni">Desdejuni</a></li>
+                        <li><a href="#dinar">Dinar</a></li>
+                        <li><a href="#sopar">Sopar</a></li>
+                    </ul>
+
+                    <form action="#" method="post">
+                      <label for="search" class="visually-hidden">Cercar per paraula</label>
+                      <input type="search" class="search" placeholder="Cerca..." name="search" id="search">
+                    </form>
+
+                </nav>
+
+                <div>
+                    <div class="llistaCategories" id="dinar">
+                        <h2>Dinar</h2>
+                        <div class = "gridMenjars">
+                            <article>
+                                <figure>
+                                    <img src="assets/img/arrosAlForn.png" alt="Arros al forn">
+                                </figure>
+                                <div class="receptesData">
+                                    <h3><cite>Arrós al forn</cite></h3>
+                                    <a href="" class="btn btn-dark">Anar a la recepta<span class="visually-hidden">Anar a la recepta</span></a>
+                                </div>
+                            </article>
+                            <article>
+                                <figure>
+                                    <img src="assets/img/cousCous.png" alt="Cous cous">
+                                </figure>
+                                <div class="receptesData">
+                                    <h3><cite>Cous cous</cite></h3>
+                                    <a href="det1.html" class="btn btn-dark">Anar a la recepta<span class="visually-hidden">Anar a la recepta</span></a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                     <div class="llistaCategories" id="sopar">
+                        <h2>Sopar</h2>
+                        <div class = "gridMenjars">
+                            <article>
+                                <figure>
+                                    <img src="assets/img/tacos.jpg" alt="Tacos">
+                                </figure>
+                                <div class="receptesData">
+                                    <h3><cite>Tacos</cite></h3>
+                                    <a href="" class="btn btn-dark">Anar a la recepta<span class="visually-hidden">Anar a la recepta</span></a>
+                                </div>
+                            </article>
+                            <article>
+                                <figure>
+                                    <img src="assets/img/ramen.jpg" alt="Ramen">
+                                </figure>
+                                <div class="receptesData">
+                                    <h3><cite>Ramen</cite></h3>
+                                    <a href="" class="btn btn-dark">Anar a la recepta<span class="visually-hidden">Anar a la recepta</span></a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                     <div class="llistaCategories" id="desdejuni">
+                        <h2>Desdejuni</h2>
+                        <div class = "gridMenjars">
+                            <article>
+                                <figure>
+                                    <img src="assets/img/iogurt.jpg" alt="Iogurt">
+                                </figure>
+                                <div class="receptesData">
+                                    <h3><cite>Kefir</cite></h3>
+                                    <a href="" class="btn btn-dark">Anar a la recepta<span class="visually-hidden">Anar a la recepta</span></a>
+                                </div>
+                            </article>
+                            <article>
+                                <figure>
+                                    <img src="assets/img/creps.jpg" alt="Crepes">
+                                </figure>
+                                <div class="receptesData">
+                                    <h3><cite>Crepes</cite></h3>
+                                    <a href="det2.html" class="btn btn-dark">Anar a la recepta<span class="visually-hidden">Anar a la recepta</span></a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+<footer>
+    <p>LARA VILA GREGORI - P1 - EINES HTML I CSS I - 2025 / 2026</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>

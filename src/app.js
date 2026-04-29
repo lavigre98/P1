@@ -1,11 +1,13 @@
 import confetti from 'canvas-confetti';
 
 // Es llança automàticament en carregar el script
-confetti({
-    particleCount: 150,
-    spread: 70,
-    origin: { y: 0.6 }
-});
+if (document.body.classList.contains('home')) {
+    confetti({
+        particleCount: 150,
+        spread: 70,
+        origin: { y: 0.6 }
+    });
+}
 
 // Busquem el títol que ja tenim a l'HTML
 const titol = document.getElementById('titolQueCanviaDeColor');

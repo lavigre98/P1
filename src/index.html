@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="home">
 
     <!-- Inclusió de la capçalera mitjançant PostHTML-include -->
     <include src="src/header.html"></include>
@@ -65,26 +65,28 @@
                         >
                     </picture>                
                 </figure>
-                <div>
-                    <!-- SVG animat -->                 
-                    <div class="svgRecepta">
-                    <svg width="120" height="120" viewBox="0 0 120 120">
+                <div class="text">
+                    <div class="heroText">
+                        <h1 id="titolQueCanviaDeColor">Hola!</h1>
+                         <!-- SVG animat -->                 
+                        <div class="svgRecepta">
+                        <svg width="120" height="120" viewBox="0 0 120 120">
 
-                        <!-- Plat -->
-                        <circle cx="60" cy="60" r="40" class="plat"/>
+                            <!-- Plat -->
+                            <circle cx="60" cy="60" r="40" class="plat"/>
 
-                        <!-- Menjar -->
-                        <circle cx="60" cy="60" r="25" class="menjar"/>
+                            <!-- Menjar -->
+                            <circle cx="60" cy="60" r="25" class="menjar"/>
 
-                        <!-- Vapor -->
-                        <path d="M50 40 C45 35, 55 30, 50 20" class="vapor vapor1"/>
-                        <path d="M60 40 C55 35, 65 30, 60 20" class="vapor vapor2"/>
-                        <path d="M70 40 C65 35, 75 30, 70 20" class="vapor vapor3"/>
+                            <!-- Vapor -->
+                            <path d="M50 40 C45 35, 55 30, 50 20" class="vapor vapor1"/>
+                            <path d="M60 40 C55 35, 65 30, 60 20" class="vapor vapor2"/>
+                            <path d="M70 40 C65 35, 75 30, 70 20" class="vapor vapor3"/>
 
-                    </svg>
+                        </svg>
+                        </div>
                     </div>
 
-                    <h1 id="titolQueCanviaDeColor">Hola!</h1>
                     <p>Aquesta pàgina web serà el teu espai d’inspiració culinària per a aquells dies en què no saps què cuinar.</p>
                     <p> Què t'apeteix menjar avui?</p>
                     <a href="categoria.html"  class="btn btn-dark">Veure totes les receptes<span class="visually-hidden">Veure totes les receptes</span></a>

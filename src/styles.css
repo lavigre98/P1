@@ -208,6 +208,12 @@ a.btn.btn-transparent:hover {
    6) PORTADA / ÍNDEX
 ========================================================= */
 
+.heroText {
+  display: flex;
+  align-items: center; /* alinea verticalmente */
+  gap: 10px; /* espacio entre huevo y texto */
+}
+
 /* Secció hero de benvinguda */
 .caixaBenvinguda {
   width: 100%;
@@ -249,7 +255,7 @@ a.btn.btn-transparent:hover {
  margin-top: 20px;
 }
 
-.contenedorIndex div{
+.text{
   padding: 20px;
 }
 
@@ -299,8 +305,15 @@ padding-bottom: 30px;
    ========================================================= */
 
 /*SVG ANIMAT*/
-   .svgRecepta {
-  margin-bottom: 10px;
+.svgRecepta {
+  width: 60px;
+  height: 60px;
+}
+
+
+.svgRecepta svg {
+  width: 100%;
+  height: 100%;
 }
 
 .plat {

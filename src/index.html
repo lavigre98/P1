@@ -28,9 +28,62 @@
         <section>
             <div class="contenedorIndex">
                 <figure>
-                    <img src="assets/img/imatgePresentacio.png" alt="Imatge Presentació">
+                    <!-- Tècnica imatge responsive: "Resolution Switching" per grandària -->
+                    <picture>
+                        <!-- AVIF (millor compressió) -->
+                        <source
+                            type="image/avif"
+                            srcset="
+                                assets/img/imatge-presentacio.jpg?as=avif&width=400 400w,
+                                assets/img/imatge-presentacio.jpg?as=avif&width=800 800w,
+                                assets/img/imatge-presentacio.jpg?as=avif&width=1200 1200w
+                            "
+                            sizes="(width >= 992px) 50vw, 100vw"
+                        >
+
+                        <!-- WebP (fallback modern) -->
+                        <source
+                            type="image/webp"
+                            srcset="
+                                assets/img/imatge-presentacio.jpg?as=webp&width=400 400w,
+                                assets/img/imatge-presentacio.jpg?as=webp&width=800 800w,
+                                assets/img/imatge-presentacio.jpg?as=webp&width=1200 1200w
+                            "
+                            sizes="(width >= 992px) 50vw, 100vw"
+                        >
+
+                        <img
+                        src="assets/img/imatge-presentacio.jpg?width=800"
+                        srcset="
+                            assets/img/imatge-presentacio.jpg?width=400 400w,
+                            assets/img/imatge-presentacio.jpg?width=800 800w,
+                            assets/img/imatge-presentacio.jpg?width=1200 1200w
+                        "
+                        sizes="(width >= 992px) 50vw, 100vw"
+                        alt="Imatge de presentació del blog de receptes"
+                        class="imatgeClipPath"   
+                        >
+                    </picture>                
                 </figure>
                 <div>
+                    <!-- SVG animat -->                 
+                    <div class="svgRecepta">
+                    <svg width="120" height="120" viewBox="0 0 120 120">
+
+                        <!-- Plat -->
+                        <circle cx="60" cy="60" r="40" class="plat"/>
+
+                        <!-- Menjar -->
+                        <circle cx="60" cy="60" r="25" class="menjar"/>
+
+                        <!-- Vapor -->
+                        <path d="M50 40 C45 35, 55 30, 50 20" class="vapor vapor1"/>
+                        <path d="M60 40 C55 35, 65 30, 60 20" class="vapor vapor2"/>
+                        <path d="M70 40 C65 35, 75 30, 70 20" class="vapor vapor3"/>
+
+                    </svg>
+                    </div>
+
                     <h1 id="titolQueCanviaDeColor">Hola!</h1>
                     <p>Aquesta pàgina web serà el teu espai d’inspiració culinària per a aquells dies en què no saps què cuinar.</p>
                     <p> Què t'apeteix menjar avui?</p>
@@ -45,7 +98,36 @@
                         <div class="file">Desdejuni</div>
                         <div class="contingutReceptesDestacades">
                             <figure>
-                                <img src="assets/img/creps.jpg" alt="Crepes">
+                                <!-- Tècnica imatge responsive: "Resolution Switching" per DPI -->
+                                <picture>
+                                 <!-- AVIF -->
+                                    <source
+                                        type="image/avif"
+                                        srcset="
+                                            assets/img/creps.jpg?as=avif&width=400 1x,
+                                            assets/img/creps.jpg?as=avif&width=800 2x
+                                        "
+                                    >
+
+                                    <!-- WebP -->
+                                    <source
+                                        type="image/webp"
+                                        srcset="
+                                            assets/img/creps.jpg?as=webp&width=400 1x,
+                                            assets/img/creps.jpg?as=webp&width=800 2x
+                                        "
+                                    >    
+
+                                    <img
+                                    src="assets/img/creps.jpg?width=400"
+                                    srcset="
+                                        assets/img/creps.jpg?width=400 1x,
+                                        assets/img/creps.jpg?width=800 2x
+                                    "
+                                    alt="Crepes"
+                                    loading="lazy"
+                                    >
+                                </picture>                            
                             </figure>
                             <div class="receptesData">
                                 <h3><cite>Crepes</cite></h3>
@@ -57,19 +139,76 @@
                         <div class="file">Dinar</div>
                         <div class="contingutReceptesDestacades"> 
                             <figure>
-                                    <img src="assets/img/cousCous.png" alt="Cous cous">
-                                </figure>
-                                <div class="receptesData">
-                                    <h3><cite>Cous cous</cite></h3>
-                                    <a href="det1.html" class="btn btn-dark">Anar a la recepta<span class="visually-hidden">Anar a la recepta</span></a>
-                                </div>
+                                <!-- Tècnica imatge responsive: "Resolution Switching" per DPI -->
+                                <picture>
+                                 <!-- AVIF -->
+                                    <source
+                                        type="image/avif"
+                                        srcset="
+                                            assets/img/cous-cous.jpg?as=avif&width=400 1x,
+                                            assets/img/cous-cous.jpg?as=avif&width=800 2x
+                                        "
+                                    >
+
+                                    <!-- WebP -->
+                                    <source
+                                        type="image/webp"
+                                        srcset="
+                                            assets/img/cous-cous.jpg?as=webp&width=400 1x,
+                                            assets/img/cous-cous.jpg?as=webp&width=800 2x
+                                        "
+                                    >    
+
+                                    <img
+                                    src="assets/img/cous-cous.jpg?width=400"
+                                    srcset="
+                                        assets/img/cous-cous.jpg?width=400 1x,
+                                        assets/img/cous-cous.jpg?width=800 2x
+                                    "
+                                    alt="Cous cous"
+                                    loading="lazy"
+                                    >
+                                </picture>
+                            </figure>
+                            <div class="receptesData">
+                                <h3><cite>Cous cous</cite></h3>
+                                <a href="det1.html" class="btn btn-dark">Anar a la recepta<span class="visually-hidden">Anar a la recepta</span></a>
+                            </div>
                         </div>
                     </article>
                     <article>
                         <div class="file">Sopar</div>
                         <div class="contingutReceptesDestacades"> 
                             <figure>
-                                <img src="assets/img/ramen.jpg" alt="Ramen">
+                                <picture>
+                                 <!-- AVIF -->
+                                    <source
+                                        type="image/avif"
+                                        srcset="
+                                            assets/img/ramen.jpg?as=avif&width=400 1x,
+                                            assets/img/ramen.jpg?as=avif&width=800 2x
+                                        "
+                                    >
+
+                                    <!-- WebP -->
+                                    <source
+                                        type="image/webp"
+                                        srcset="
+                                            assets/img/ramen.jpg?as=webp&width=400 1x,
+                                            assets/img/ramen.jpg?as=webp&width=800 2x
+                                        "
+                                    >    
+
+                                    <img
+                                    src="assets/img/ramen.jpg?width=400"
+                                    srcset="
+                                        assets/img/ramen.jpg?width=400 1x,
+                                        assets/img/ramen.jpg?width=800 2x
+                                    "
+                                    alt="Ramen"
+                                    loading="lazy"
+                                    >
+                                </picture>
                             </figure>
                             <div class="receptesData">
                                 <h3><cite>Ramen</cite></h3>

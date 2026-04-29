@@ -19,7 +19,44 @@
           <div class="file">Desdejuni</div>
           <h1 class="file"><cite>Crepes</cite></h1>
           <div class="intro-file">
-            <img src="assets/img/creps.jpg" alt="Crepes">
+            <figure>
+              <picture>
+                  <!--  AVIF - mòbil -->
+                  <source
+                      media="(max-width: 767px)"
+                      type="image/avif"
+                      srcset="assets/img/creps.jpg?as=avif&width=600&height=700&fit=cover"
+                  >
+
+                  <!--  AVIF - desktop -->
+                  <source
+                      media="(min-width: 768px)"
+                      type="image/avif"
+                      srcset="assets/img/creps.jpg?as=avif&width=1000&height=650&fit=cover"
+                  >
+
+                  <!--  WebP - mòbil -->
+                  <source
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                      srcset="assets/img/creps.jpg?as=webp&width=600&height=700&fit=cover"
+                  >
+
+                  <!--  WebP - desktop -->
+                  <source
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                      srcset="assets/img/creps.jpg?as=webp&width=1000&height=650&fit=cover"
+                  >
+
+                  <!--  Fallback JPG -->
+                  <img
+                      src="assets/img/creps.jpg?width=800&height=600&fit=cover"
+                      alt="Creps"
+                      class="intro-file__image"
+                  >
+              </picture>
+            </figure>
             <div>
               <p>T'apetix un dolcet?.</p>
             </div>
@@ -66,18 +103,98 @@
             </ol>
                 <div>
                   <figure>
-                      <img src="assets/img/crepsuno.png" alt="Crepes pas 1">
-                      <figcaption>Pas 1</figcaption>
+                    <picture>
+
+                      <source
+                        type="image/avif"
+                        srcset="
+                          assets/img/creps-pas1.jpg?as=avif&width=400 1x,
+                          assets/img/creps-pas1.jpg?as=avif&width=800 2x
+                        "
+                      >
+
+                      <source
+                        type="image/webp"
+                        srcset="
+                          assets/img/creps-pas1.jpg?as=webp&width=400 1x,
+                          assets/img/creps-pas1.jpg?as=webp&width=800 2x
+                        "
+                      >
+
+                      <img
+                        src="assets/img/creps-pas1.jpg?width=400"
+                        srcset="
+                          assets/img/creps-pas1.jpg?width=400 1x,
+                          assets/img/creps-pas1.jpg?width=800 2x
+                        "
+                        alt="Crepes pas 1"
+                      >
+                    </picture>
+                    <figcaption>Pas 1</figcaption>
                   </figure>
 
                   <figure>
-                      <img src="assets/img/crepsdos.png" alt="Crepes pas 2">
-                      <figcaption>Pas 2</figcaption>
+                    <picture>
+
+                      <source
+                        type="image/avif"
+                        srcset="
+                          assets/img/creps-pas2.jpg?as=avif&width=400 1x,
+                          assets/img/creps-pas2.jpg?as=avif&width=800 2x
+                        "
+                      >
+
+                      <source
+                        type="image/webp"
+                        srcset="
+                          assets/img/creps-pas2.jpg?as=webp&width=400 1x,
+                          assets/img/creps-pas2.jpg?as=webp&width=800 2x
+                        "
+                      >
+
+                      <img
+                        src="assets/img/creps-pas2.jpg?width=400"
+                        srcset="
+                          assets/img/creps-pas2.jpg?width=400 1x,
+                          assets/img/creps-pas2.jpg?width=800 2x
+                        "
+                        alt="Crepes pas 2"
+                      >
+
+                    </picture>
+                    <figcaption>Pas 2</figcaption>
                   </figure>
 
                   <figure>
-                      <img src="assets/img/crepsquatre.png" alt="Crepes pas 3">
-                      <figcaption>Pas 3</figcaption>
+                    <picture>
+
+                      <source
+                        type="image/avif"
+                        srcset="
+                          assets/img/creps-pas3.jpg?as=avif&width=400 1x,
+                          assets/img/creps-pas3.jpg?as=avif&width=800 2x
+                        "
+                      >
+
+                      <source
+                        type="image/webp"
+                        srcset="
+                          assets/img/creps-pas3.jpg?as=webp&width=400 1x,
+                          assets/img/creps-pas3.jpg?as=webp&width=800 2x
+                        "
+                      >
+
+                      <img
+                        src="assets/img/creps-pas3.jpg?width=400"
+                        srcset="
+                          assets/img/creps-pas3.jpg?width=400 1x,
+                          assets/img/creps-pas3.jpg?width=800 2x
+                        "
+                        alt="Crepes pas 3"
+                      >
+
+                    </picture>
+                    <figcaption>Pas 3</figcaption>
                   </figure>
                 </div>
           </section>

@@ -1,8 +1,25 @@
 <header class="site-header container-fluid">
-  <div>
-    <!-- Recorda afegir un text alternatiu per accessibilitat [6] -->
-    <img src="assets/img/logo.png" alt="Logo del Blog de Receptes Quotidianes" width="50">
-  </div>
+<div>
+  <picture>
+    <!-- Versions en AVIF (el format més lleuger) -->
+    <source 
+      type="image/avif" 
+      srcset="assets/img/logo.png?as=avif 1x, 
+              assets/img/logo.png?as=avif&width=100 2x">
+    
+    <!-- Versions en WebP (molt compatible i lleuger) -->
+    <source 
+      type="image/webp" 
+      srcset="assets/img/logo.png?as=webp 1x, 
+              assets/img/logo.png?as=webp&width=100 2x">
+    <img 
+      src="assets/img/logo.png" 
+      srcset="assets/img/logo.png 1x, 
+              assets/img/logo.png?width=100 2x" 
+      alt="Logo del Blog de Receptes Quotidianes" 
+      width="50">
+  </picture>
+</div>
   <nav class="main-nav">
     <ul>
       <li><a href="index.html">Inici</a></li>

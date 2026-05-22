@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Receptes Quotidianes - Llistat de Plats</title>
+    <title>Recepta de Crepes - Blog de Receptes Quotidianes</title>
+    <meta name="description" content="Recepta de crepes amb ingredients, elaboració pas a pas i imatges del procés.">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
 </head>
@@ -50,11 +51,13 @@
                                 srcset="assets/img/creps.jpg?as=webp&width=1000&height=650&fit=cover"
                             >
 
-                            <!-- Fallback JPG -->
+                            <!-- Imatge principal: no s'aplica lazy loading perquè és visible en la primera càrrega -->
                             <img
                                 src="assets/img/creps.jpg?width=800&height=600&fit=cover"
                                 alt="Creps"
                                 class="intro-file__image"
+                                width="800"
+                                height="600"
                             >
                         </picture>
                     </figure>
@@ -83,7 +86,7 @@
                         <ol class="steps">
                             <li>
                                 <strong>Mescla els ingredients secs</strong>
-                                <p>En un bol, posa la farina, la sal i el sucre (si uses).</p>
+                                <p>En un bol, posa la farina, la sal i el sucre si uses.</p>
                             </li>
 
                             <li>
@@ -133,6 +136,8 @@
                                             assets/img/creps-pas1.jpg?width=800 2x
                                         "
                                         alt="Crepes pas 1"
+                                        width="400"
+                                        height="300"
                                         loading="lazy"
                                     >
                                 </picture>
@@ -164,6 +169,8 @@
                                             assets/img/creps-pas2.jpg?width=800 2x
                                         "
                                         alt="Crepes pas 2"
+                                        width="400"
+                                        height="300"
                                         loading="lazy"
                                     >
                                 </picture>
@@ -195,6 +202,8 @@
                                             assets/img/creps-pas3.jpg?width=800 2x
                                         "
                                         alt="Crepes pas 3"
+                                        width="400"
+                                        height="300"
                                         loading="lazy"
                                     >
                                 </picture>

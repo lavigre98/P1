@@ -6,209 +6,222 @@
     <title>Receptes Quotidianes - Llistat de Plats</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
-
 </head>
+
 <body>
 
     <!-- Activitat 5: Reutilitzem la capçalera -->
     <include src="src/header.html"></include>
 
-       <main>
-      <div>
-        <article>
-          <div class="file">Desdejuni</div>
-          <h1 class="file"><cite>Crepes</cite></h1>
-          <div class="intro-file">
-            <figure>
-              <picture>
-                  <!--  AVIF - mòbil -->
-                  <source
-                      media="(max-width: 767px)"
-                      type="image/avif"
-                      srcset="assets/img/creps.jpg?as=avif&width=600&height=700&fit=cover"
-                  >
+    <main>
+        <div>
+            <article>
+                <div class="file">Desdejuni</div>
+                <h1 class="file"><cite>Crepes</cite></h1>
 
-                  <!--  AVIF - desktop -->
-                  <source
-                      media="(min-width: 768px)"
-                      type="image/avif"
-                      srcset="assets/img/creps.jpg?as=avif&width=1000&height=650&fit=cover"
-                  >
+                <div class="intro-file">
+                    <figure>
+                        <picture>
+                            <!-- AVIF - mòbil -->
+                            <source
+                                media="(max-width: 767px)"
+                                type="image/avif"
+                                srcset="assets/img/creps.jpg?as=avif&width=600&height=700&fit=cover"
+                            >
 
-                  <!--  WebP - mòbil -->
-                  <source
-                      media="(max-width: 767px)"
-                      type="image/webp"
-                      srcset="assets/img/creps.jpg?as=webp&width=600&height=700&fit=cover"
-                  >
+                            <!-- AVIF - desktop -->
+                            <source
+                                media="(min-width: 768px)"
+                                type="image/avif"
+                                srcset="assets/img/creps.jpg?as=avif&width=1000&height=650&fit=cover"
+                            >
 
-                  <!--  WebP - desktop -->
-                  <source
-                      media="(min-width: 768px)"
-                      type="image/webp"
-                      srcset="assets/img/creps.jpg?as=webp&width=1000&height=650&fit=cover"
-                  >
+                            <!-- WebP - mòbil -->
+                            <source
+                                media="(max-width: 767px)"
+                                type="image/webp"
+                                srcset="assets/img/creps.jpg?as=webp&width=600&height=700&fit=cover"
+                            >
 
-                  <!--  Fallback JPG -->
-                  <img
-                      src="assets/img/creps.jpg?width=800&height=600&fit=cover"
-                      alt="Creps"
-                      class="intro-file__image"
-                  >
-              </picture>
-            </figure>
-            <div>
-              <p>T'apetix un dolcet?.</p>
-            </div>
-          </div>
-          <div>
-            <h2>Ingredients per a 4 persones</h2>
-              <ul class="ingredients">
-                <li>250 ml de llet sencera</li>
-                <li>125 grams de farina</li>
-                <li>2 ous mitjans</li>
-                <li>10 grams de sucre</li>
-                <li>1 pessiguet de sal</li>
-                <li>mantequilla</li>
-              </ul>
-          </div>
-          <section>
-          <h2>Elaboració</h2>
-          <div class="elaboracio">
-            <ol class="steps">
-              <li>
-                <strong>Mescla els ingredients secs</strong>
-                <p>En un bol, posa la farina, la sal i el sucre (si uses).</p>
-              </li>
+                            <!-- WebP - desktop -->
+                            <source
+                                media="(min-width: 768px)"
+                                type="image/webp"
+                                srcset="assets/img/creps.jpg?as=webp&width=1000&height=650&fit=cover"
+                            >
 
-              <li>
-                <strong>Afegeix els líquids</strong>
-                <p>Incorpora els ous i mescla. Després afegeix la llet a poc a poc mentre bats per a evitar grumolls.</p>
-              </li>
+                            <!-- Fallback JPG -->
+                            <img
+                                src="assets/img/creps.jpg?width=800&height=600&fit=cover"
+                                alt="Creps"
+                                class="intro-file__image"
+                            >
+                        </picture>
+                    </figure>
 
-              <li>
-                <strong>Deixa reposar</strong>
-                <p>Deixa reposar la massa uns 15-30 minuts.</p>
-              </li>
-
-              <li>
-                <strong>Cuina els crepes</strong>
-                <p>Escalfa una paella antiadherent amb una mica de mantega.Aboca una mica de massa i mou la paella per a repartir-la fina.Cuina 1-2 minuts fins que es dauri, dona-li la volta i cuina l'altre costat.</p>
-              </li>
-
-              <li>
-                <strong>Serveix</strong>
-                <p>Pots emplenar-los amb alguna cosa dolça, com xocolata, sucre, melmelada o salat, com pernil, formatge, ou…</p>
-              </li>
-            </ol>
-                <div>
-                  <figure>
-                    <picture>
-
-                      <source
-                        type="image/avif"
-                        srcset="
-                          assets/img/creps-pas1.jpg?as=avif&width=400 1x,
-                          assets/img/creps-pas1.jpg?as=avif&width=800 2x
-                        "
-                      >
-
-                      <source
-                        type="image/webp"
-                        srcset="
-                          assets/img/creps-pas1.jpg?as=webp&width=400 1x,
-                          assets/img/creps-pas1.jpg?as=webp&width=800 2x
-                        "
-                      >
-
-                      <img
-                        src="assets/img/creps-pas1.jpg?width=400"
-                        srcset="
-                          assets/img/creps-pas1.jpg?width=400 1x,
-                          assets/img/creps-pas1.jpg?width=800 2x
-                        "
-                        alt="Crepes pas 1"
-                      >
-                    </picture>
-                    <figcaption>Pas 1</figcaption>
-                  </figure>
-
-                  <figure>
-                    <picture>
-
-                      <source
-                        type="image/avif"
-                        srcset="
-                          assets/img/creps-pas2.jpg?as=avif&width=400 1x,
-                          assets/img/creps-pas2.jpg?as=avif&width=800 2x
-                        "
-                      >
-
-                      <source
-                        type="image/webp"
-                        srcset="
-                          assets/img/creps-pas2.jpg?as=webp&width=400 1x,
-                          assets/img/creps-pas2.jpg?as=webp&width=800 2x
-                        "
-                      >
-
-                      <img
-                        src="assets/img/creps-pas2.jpg?width=400"
-                        srcset="
-                          assets/img/creps-pas2.jpg?width=400 1x,
-                          assets/img/creps-pas2.jpg?width=800 2x
-                        "
-                        alt="Crepes pas 2"
-                      >
-
-                    </picture>
-                    <figcaption>Pas 2</figcaption>
-                  </figure>
-
-                  <figure>
-                    <picture>
-
-                      <source
-                        type="image/avif"
-                        srcset="
-                          assets/img/creps-pas3.jpg?as=avif&width=400 1x,
-                          assets/img/creps-pas3.jpg?as=avif&width=800 2x
-                        "
-                      >
-
-                      <source
-                        type="image/webp"
-                        srcset="
-                          assets/img/creps-pas3.jpg?as=webp&width=400 1x,
-                          assets/img/creps-pas3.jpg?as=webp&width=800 2x
-                        "
-                      >
-
-                      <img
-                        src="assets/img/creps-pas3.jpg?width=400"
-                        srcset="
-                          assets/img/creps-pas3.jpg?width=400 1x,
-                          assets/img/creps-pas3.jpg?width=800 2x
-                        "
-                        alt="Crepes pas 3"
-                      >
-
-                    </picture>
-                    <figcaption>Pas 3</figcaption>
-                  </figure>
+                    <div>
+                        <p>T'apetix un dolcet?.</p>
+                    </div>
                 </div>
-          </section>
 
-          <figure class="file">
-        <iframe src="https://www.youtube.com/embed/oa-W3d0IKS8?si=Um0xBEwDIWJ3ENQ2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>          </figure>
-        </article>
-      </div>
+                <div>
+                    <h2>Ingredients per a 4 persones</h2>
+                    <ul class="ingredients">
+                        <li>250 ml de llet sencera</li>
+                        <li>125 grams de farina</li>
+                        <li>2 ous mitjans</li>
+                        <li>10 grams de sucre</li>
+                        <li>1 pessiguet de sal</li>
+                        <li>mantequilla</li>
+                    </ul>
+                </div>
+
+                <section>
+                    <h2>Elaboració</h2>
+
+                    <div class="elaboracio">
+                        <ol class="steps">
+                            <li>
+                                <strong>Mescla els ingredients secs</strong>
+                                <p>En un bol, posa la farina, la sal i el sucre (si uses).</p>
+                            </li>
+
+                            <li>
+                                <strong>Afegeix els líquids</strong>
+                                <p>Incorpora els ous i mescla. Després afegeix la llet a poc a poc mentre bats per a evitar grumolls.</p>
+                            </li>
+
+                            <li>
+                                <strong>Deixa reposar</strong>
+                                <p>Deixa reposar la massa uns 15-30 minuts.</p>
+                            </li>
+
+                            <li>
+                                <strong>Cuina els crepes</strong>
+                                <p>Escalfa una paella antiadherent amb una mica de mantega. Aboca una mica de massa i mou la paella per a repartir-la fina. Cuina 1-2 minuts fins que es dauri, dona-li la volta i cuina l'altre costat.</p>
+                            </li>
+
+                            <li>
+                                <strong>Serveix</strong>
+                                <p>Pots emplenar-los amb alguna cosa dolça, com xocolata, sucre, melmelada o salat, com pernil, formatge, ou…</p>
+                            </li>
+                        </ol>
+
+                        <div>
+                            <figure>
+                                <picture>
+                                    <source
+                                        type="image/avif"
+                                        srcset="
+                                            assets/img/creps-pas1.jpg?as=avif&width=400 1x,
+                                            assets/img/creps-pas1.jpg?as=avif&width=800 2x
+                                        "
+                                    >
+
+                                    <source
+                                        type="image/webp"
+                                        srcset="
+                                            assets/img/creps-pas1.jpg?as=webp&width=400 1x,
+                                            assets/img/creps-pas1.jpg?as=webp&width=800 2x
+                                        "
+                                    >
+
+                                    <img
+                                        src="assets/img/creps-pas1.jpg?width=400"
+                                        srcset="
+                                            assets/img/creps-pas1.jpg?width=400 1x,
+                                            assets/img/creps-pas1.jpg?width=800 2x
+                                        "
+                                        alt="Crepes pas 1"
+                                        loading="lazy"
+                                    >
+                                </picture>
+                                <figcaption>Pas 1</figcaption>
+                            </figure>
+
+                            <figure>
+                                <picture>
+                                    <source
+                                        type="image/avif"
+                                        srcset="
+                                            assets/img/creps-pas2.jpg?as=avif&width=400 1x,
+                                            assets/img/creps-pas2.jpg?as=avif&width=800 2x
+                                        "
+                                    >
+
+                                    <source
+                                        type="image/webp"
+                                        srcset="
+                                            assets/img/creps-pas2.jpg?as=webp&width=400 1x,
+                                            assets/img/creps-pas2.jpg?as=webp&width=800 2x
+                                        "
+                                    >
+
+                                    <img
+                                        src="assets/img/creps-pas2.jpg?width=400"
+                                        srcset="
+                                            assets/img/creps-pas2.jpg?width=400 1x,
+                                            assets/img/creps-pas2.jpg?width=800 2x
+                                        "
+                                        alt="Crepes pas 2"
+                                        loading="lazy"
+                                    >
+                                </picture>
+                                <figcaption>Pas 2</figcaption>
+                            </figure>
+
+                            <figure>
+                                <picture>
+                                    <source
+                                        type="image/avif"
+                                        srcset="
+                                            assets/img/creps-pas3.jpg?as=avif&width=400 1x,
+                                            assets/img/creps-pas3.jpg?as=avif&width=800 2x
+                                        "
+                                    >
+
+                                    <source
+                                        type="image/webp"
+                                        srcset="
+                                            assets/img/creps-pas3.jpg?as=webp&width=400 1x,
+                                            assets/img/creps-pas3.jpg?as=webp&width=800 2x
+                                        "
+                                    >
+
+                                    <img
+                                        src="assets/img/creps-pas3.jpg?width=400"
+                                        srcset="
+                                            assets/img/creps-pas3.jpg?width=400 1x,
+                                            assets/img/creps-pas3.jpg?width=800 2x
+                                        "
+                                        alt="Crepes pas 3"
+                                        loading="lazy"
+                                    >
+                                </picture>
+                                <figcaption>Pas 3</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </section>
+
+                <figure class="file">
+                    <iframe
+                        src="https://www.youtube.com/embed/oa-W3d0IKS8?si=Um0xBEwDIWJ3ENQ2"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                    </iframe>
+                </figure>
+            </article>
+        </div>
     </main>
 
-<footer>
-    <p>LARA VILA GREGORI - P1 - EINES HTML I CSS I - 2025 / 2026</p>
-</footer>
+    <footer>
+        <p>LARA VILA GREGORI - P1 - EINES HTML I CSS I - 2025 / 2026</p>
+    </footer>
 
-<script type="module" src="app.js"></script>
+    <script type="module" src="app.js"></script>
 </body>
 </html>

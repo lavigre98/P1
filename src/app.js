@@ -1,11 +1,11 @@
-import confetti from 'canvas-confetti';
-
-// Es llança automàticament en carregar el script
+// El confetti només es carrega si estem en la pàgina d'inici
 if (document.body.classList.contains('home')) {
-    confetti({
-        particleCount: 150,
-        spread: 70,
-        origin: { y: 0.6 }
+    import('canvas-confetti').then(({ default: confetti }) => {
+        confetti({
+            particleCount: 150,
+            spread: 70,
+            origin: { y: 0.6 }
+        });
     });
 }
 
@@ -14,8 +14,8 @@ const titol = document.getElementById('titolQueCanviaDeColor');
 
 if (titol) {
     titol.addEventListener('click', () => {
-        // Al fer clic, el títol canvia de color
-        titol.style.color = '#e67e22'; 
+        // En fer clic, el títol canvia de color
+        titol.style.color = '#e67e22';
         console.log("Has clicat el títol!");
     });
 }

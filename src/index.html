@@ -11,26 +11,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
 </head>
+
 <body class="home">
 
     <!-- Inclusió de la capçalera mitjançant PostHTML-include -->
     <include src="src/header.html"></include>
 
-        <section class="caixaBenvinguda">
-                <div>
-                    <div class="text">
-                        <h2 id = "titolPrincipal">Blog de Receptes</h2>
-                    </div> 
-                </div>
-        </section>
+    <section class="caixaBenvinguda">
+        <div>
+            <div class="text">
+                <h2 id="titolPrincipal">Blog de Receptes</h2>
+            </div> 
+        </div>
+    </section>
 
     <main>
         <section>
             <div class="contenedorIndex">
                 <figure>
-                    <!-- Tècnica imatge responsive: "Resolution Switching" per grandària -->
+                    <!-- Imatge principal: no s'aplica lazy loading perquè és visible en la primera càrrega -->
                     <picture>
-                        <!-- AVIF (millor compressió) -->
+                        <!-- AVIF -->
                         <source
                             type="image/avif"
                             srcset="
@@ -41,7 +42,7 @@
                             sizes="(width >= 992px) 50vw, 100vw"
                         >
 
-                        <!-- WebP (fallback modern) -->
+                        <!-- WebP -->
                         <source
                             type="image/webp"
                             srcset="
@@ -53,74 +54,81 @@
                         >
 
                         <img
-                        src="assets/img/imatge-presentacio.jpg?width=800"
-                        srcset="
-                            assets/img/imatge-presentacio.jpg?width=400 400w,
-                            assets/img/imatge-presentacio.jpg?width=800 800w,
-                            assets/img/imatge-presentacio.jpg?width=1200 1200w
-                        "
-                        sizes="(width >= 992px) 50vw, 100vw"
-                        alt="Imatge de presentació del blog de receptes"
-                        class="imatgeClipPath"   
+                            src="assets/img/imatge-presentacio.jpg?width=800"
+                            srcset="
+                                assets/img/imatge-presentacio.jpg?width=400 400w,
+                                assets/img/imatge-presentacio.jpg?width=800 800w,
+                                assets/img/imatge-presentacio.jpg?width=1200 1200w
+                            "
+                            sizes="(width >= 992px) 50vw, 100vw"
+                            alt="Imatge de presentació del blog de receptes"
+                            class="imatgeClipPath"
                         >
                     </picture>                
                 </figure>
+
                 <div class="text">
                     <div class="heroText">
                         <h1 id="titolQueCanviaDeColor">Hola!</h1>
-                         <!-- SVG animat -->                 
+
+                        <!-- SVG animat -->                 
                         <div class="svgRecepta">
-                        <svg width="120" height="120" viewBox="0 0 120 120">
+                            <svg width="120" height="120" viewBox="0 0 120 120">
+                                <!-- Plat -->
+                                <circle cx="60" cy="60" r="40" class="plat"/>
 
-                            <!-- Plat -->
-                            <circle cx="60" cy="60" r="40" class="plat"/>
+                                <!-- Menjar -->
+                                <circle cx="60" cy="60" r="25" class="menjar"/>
 
-                            <!-- Menjar -->
-                            <circle cx="60" cy="60" r="25" class="menjar"/>
-
-                            <!-- Vapor -->
-                            <path d="M50 40 C45 35, 55 30, 50 20" class="vapor vapor1"/>
-                            <path d="M60 40 C55 35, 65 30, 60 20" class="vapor vapor2"/>
-                            <path d="M70 40 C65 35, 75 30, 70 20" class="vapor vapor3"/>
-
-                        </svg>
+                                <!-- Vapor -->
+                                <path d="M50 40 C45 35, 55 30, 50 20" class="vapor vapor1"/>
+                                <path d="M60 40 C55 35, 65 30, 60 20" class="vapor vapor2"/>
+                                <path d="M70 40 C65 35, 75 30, 70 20" class="vapor vapor3"/>
+                            </svg>
                         </div>
                     </div>
 
                     <p>Aquesta pàgina web serà el teu espai d’inspiració culinària per a aquells dies en què no saps què cuinar.</p>
-                    <p> Què t'apeteix menjar avui?</p>
-                    <a href="categoria.html"  class="btn btn-dark">Veure totes les receptes<span class="visually-hidden">Veure totes les receptes</span></a>
+                    <p>Què t'apeteix menjar avui?</p>
+
+                    <a href="categoria.html" class="btn btn-dark">
+                        Veure totes les receptes
+                        <span class="visually-hidden">Veure totes les receptes</span>
+                    </a>
                 </div>
             </div>
         </section>
+
         <section class="recomanacions">
             <h1>Proposta de la setmana</h1>
-                <div class = "gridMenjarsDestacats">
-                    <article>
-                        <div class="file">Desdejuni</div>
-                        <div class="contingutReceptesDestacades">
-                            <figure>
-                                <!-- Tècnica imatge responsive: "Resolution Switching" per DPI -->
-                                <picture>
-                                 <!-- AVIF -->
-                                    <source
-                                        type="image/avif"
-                                        srcset="
-                                            assets/img/creps.jpg?as=avif&width=400 1x,
-                                            assets/img/creps.jpg?as=avif&width=800 2x
-                                        "
-                                    >
 
-                                    <!-- WebP -->
-                                    <source
-                                        type="image/webp"
-                                        srcset="
-                                            assets/img/creps.jpg?as=webp&width=400 1x,
-                                            assets/img/creps.jpg?as=webp&width=800 2x
-                                        "
-                                    >    
+            <div class="gridMenjarsDestacats">
+                <article>
+                    <div class="file">Desdejuni</div>
 
-                                    <img
+                    <div class="contingutReceptesDestacades">
+                        <figure>
+                            <!-- Lazy loading aplicat perquè aquesta imatge no forma part del primer contingut visible -->
+                            <picture>
+                                <!-- AVIF -->
+                                <source
+                                    type="image/avif"
+                                    srcset="
+                                        assets/img/creps.jpg?as=avif&width=400 1x,
+                                        assets/img/creps.jpg?as=avif&width=800 2x
+                                    "
+                                >
+
+                                <!-- WebP -->
+                                <source
+                                    type="image/webp"
+                                    srcset="
+                                        assets/img/creps.jpg?as=webp&width=400 1x,
+                                        assets/img/creps.jpg?as=webp&width=800 2x
+                                    "
+                                >    
+
+                                <img
                                     src="assets/img/creps.jpg?width=400"
                                     srcset="
                                         assets/img/creps.jpg?width=400 1x,
@@ -128,40 +136,46 @@
                                     "
                                     alt="Crepes"
                                     loading="lazy"
-                                    >
-                                </picture>                            
-                            </figure>
-                            <div class="receptesData">
-                                <h3><cite>Crepes</cite></h3>
-                                <a href="det2.html" class="btn btn-dark">Anar a la recepta<span class="visually-hidden">Anar a la recepta</span></a>
-                            </div>
+                                >
+                            </picture>                            
+                        </figure>
+
+                        <div class="receptesData">
+                            <h3><cite>Crepes</cite></h3>
+                            <a href="det2.html" class="btn btn-dark">
+                                Anar a la recepta
+                                <span class="visually-hidden">Anar a la recepta</span>
+                            </a>
                         </div>
-                    </article>
-                    <article>
-                        <div class="file">Dinar</div>
-                        <div class="contingutReceptesDestacades"> 
-                            <figure>
-                                <!-- Tècnica imatge responsive: "Resolution Switching" per DPI -->
-                                <picture>
-                                 <!-- AVIF -->
-                                    <source
-                                        type="image/avif"
-                                        srcset="
-                                            assets/img/cous-cous.jpg?as=avif&width=400 1x,
-                                            assets/img/cous-cous.jpg?as=avif&width=800 2x
-                                        "
-                                    >
+                    </div>
+                </article>
 
-                                    <!-- WebP -->
-                                    <source
-                                        type="image/webp"
-                                        srcset="
-                                            assets/img/cous-cous.jpg?as=webp&width=400 1x,
-                                            assets/img/cous-cous.jpg?as=webp&width=800 2x
-                                        "
-                                    >    
+                <article>
+                    <div class="file">Dinar</div>
 
-                                    <img
+                    <div class="contingutReceptesDestacades"> 
+                        <figure>
+                            <!-- Lazy loading aplicat perquè aquesta imatge no forma part del primer contingut visible -->
+                            <picture>
+                                <!-- AVIF -->
+                                <source
+                                    type="image/avif"
+                                    srcset="
+                                        assets/img/cous-cous.jpg?as=avif&width=400 1x,
+                                        assets/img/cous-cous.jpg?as=avif&width=800 2x
+                                    "
+                                >
+
+                                <!-- WebP -->
+                                <source
+                                    type="image/webp"
+                                    srcset="
+                                        assets/img/cous-cous.jpg?as=webp&width=400 1x,
+                                        assets/img/cous-cous.jpg?as=webp&width=800 2x
+                                    "
+                                >    
+
+                                <img
                                     src="assets/img/cous-cous.jpg?width=400"
                                     srcset="
                                         assets/img/cous-cous.jpg?width=400 1x,
@@ -169,39 +183,46 @@
                                     "
                                     alt="Cous cous"
                                     loading="lazy"
-                                    >
-                                </picture>
-                            </figure>
-                            <div class="receptesData">
-                                <h3><cite>Cous cous</cite></h3>
-                                <a href="det1.html" class="btn btn-dark">Anar a la recepta<span class="visually-hidden">Anar a la recepta</span></a>
-                            </div>
+                                >
+                            </picture>
+                        </figure>
+
+                        <div class="receptesData">
+                            <h3><cite>Cous cous</cite></h3>
+                            <a href="det1.html" class="btn btn-dark">
+                                Anar a la recepta
+                                <span class="visually-hidden">Anar a la recepta</span>
+                            </a>
                         </div>
-                    </article>
-                    <article>
-                        <div class="file">Sopar</div>
-                        <div class="contingutReceptesDestacades"> 
-                            <figure>
-                                <picture>
-                                 <!-- AVIF -->
-                                    <source
-                                        type="image/avif"
-                                        srcset="
-                                            assets/img/ramen.jpg?as=avif&width=400 1x,
-                                            assets/img/ramen.jpg?as=avif&width=800 2x
-                                        "
-                                    >
+                    </div>
+                </article>
 
-                                    <!-- WebP -->
-                                    <source
-                                        type="image/webp"
-                                        srcset="
-                                            assets/img/ramen.jpg?as=webp&width=400 1x,
-                                            assets/img/ramen.jpg?as=webp&width=800 2x
-                                        "
-                                    >    
+                <article>
+                    <div class="file">Sopar</div>
 
-                                    <img
+                    <div class="contingutReceptesDestacades"> 
+                        <figure>
+                            <!-- Lazy loading aplicat perquè aquesta imatge no forma part del primer contingut visible -->
+                            <picture>
+                                <!-- AVIF -->
+                                <source
+                                    type="image/avif"
+                                    srcset="
+                                        assets/img/ramen.jpg?as=avif&width=400 1x,
+                                        assets/img/ramen.jpg?as=avif&width=800 2x
+                                    "
+                                >
+
+                                <!-- WebP -->
+                                <source
+                                    type="image/webp"
+                                    srcset="
+                                        assets/img/ramen.jpg?as=webp&width=400 1x,
+                                        assets/img/ramen.jpg?as=webp&width=800 2x
+                                    "
+                                >    
+
+                                <img
                                     src="assets/img/ramen.jpg?width=400"
                                     srcset="
                                         assets/img/ramen.jpg?width=400 1x,
@@ -209,24 +230,28 @@
                                     "
                                     alt="Ramen"
                                     loading="lazy"
-                                    >
-                                </picture>
-                            </figure>
-                            <div class="receptesData">
-                                <h3><cite>Ramen</cite></h3>
-                                <a href="" class="btn btn-dark">Anar a la recepta<span class="visually-hidden">Anar a la recepta</span></a>
-                            </div>
+                                >
+                            </picture>
+                        </figure>
+
+                        <div class="receptesData">
+                            <h3><cite>Ramen</cite></h3>
+                            <a href="" class="btn btn-dark">
+                                Anar a la recepta
+                                <span class="visually-hidden">Anar a la recepta</span>
+                            </a>
                         </div>
-                    </article>
-                </div>
-            </section>
+                    </div>
+                </article>
+            </div>
+        </section>
     </main>
 
-<footer>
-    <p>LARA VILA GREGORI - P1 - EINES HTML I CSS I - 2025 / 2026</p>
-</footer>
+    <footer>
+        <p>LARA VILA GREGORI - P1 - EINES HTML I CSS I - 2025 / 2026</p>
+    </footer>
 
-    <!-- Referència al teu fitxer JavaScript -->
-<script type="module" src="app.js"></script>
+    <!-- JavaScript carregat com a mòdul -->
+    <script type="module" src="app.js"></script>
 </body>
 </html>
